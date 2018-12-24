@@ -1,0 +1,31 @@
+.signIn{
+    display: flex;
+    white-space: nowrap;
+}
+.signInBtn{
+    border: none;
+    background-color: white;
+}
+
+.signInOverlay{
+    background-color: white;
+    height: 150px;
+    width: 300px;
+    padding: 5% 8% 3% 8%;
+    text-align: center;
+}
+
+.innerSignInBtn{
+    margin-top: 15px;
+}
+
+.signInOverlay>input{
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.signIn:hover .signInBtn label{
+    cursor: pointer;
+}
