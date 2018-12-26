@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.featured{
+    height: 200px;
+}
+
 .home>div{
     margin-bottom: 20px;
 }

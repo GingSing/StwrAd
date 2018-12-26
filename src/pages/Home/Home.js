@@ -9,6 +9,7 @@ class Home extends Component{
         return(
             <Page>
                 <div className="home">
+                    <div className="featured"></div>
                     <BrandGallery />
                 </div>
             </Page>

@@ -4,10 +4,6 @@ import './ProfileCard.css';
 
 
 class ProfileCard extends Component{
-    constructor(props){
-        super(props);
-    }
-
     render(){
         let {name, company, email, username, dateJoined } = this.props.userInfo;
         return(

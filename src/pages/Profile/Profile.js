@@ -6,9 +6,6 @@ import Page from '../Page';
 import './Profile.css';
 
 class Profile extends Component{
-    constructor(props){
-        super(props);
-    }
 
     render(){
         console.log(this.props.userInfo);

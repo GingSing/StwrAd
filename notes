@@ -1,0 +1,7 @@
+need to add functionality and showing to About, Browse, Company, Company Creator
+
+need to add more css to Profile, Post, Home(fix gallery brand)
+
+modularize the database and fix naming schemes for better readability
+
+also needs to add security to db access and for page access (protected routes)

@@ -7,8 +7,12 @@ class GalleryCard extends Component{
         let { url, title, description, likes } = this.props.product.image[0];
         return(
             <div className="galleryCard">
-            <img src={url} alt="" width="200" height="200"/>
-            {/* <div className="galleryCardDescription">
+            <img src={url} alt=""/>
+            {/*
+            
+            make white card to show description
+            
+            <div className="galleryCardDescription">
                 <h2>{title}</h2>
                 <span>{description}</span>
                 <div className="galleryCardImageInfo">
