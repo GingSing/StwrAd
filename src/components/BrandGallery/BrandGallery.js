@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getProductsForGallery } from '../../_actions/galleryActions'
+import { getMostPopularBrandsAndImages } from '../../_actions/brandActions'
+import { formatText } from '../../utilities';
 
 import GalleryCard from './GalleryCard';
 
@@ -10,22 +11,27 @@ import './BrandGallery.css';
 class BrandGallery extends Component{
 
     componentWillMount(){
-        this.props.getProductsForGallery();
+        this.props.getMostPopularBrandsAndImages();
     }
 
+    //fix so it only gives 6
     render(){
         return(
+            this.props.gettingCompanyInfo ? 
+            <div> TODO: WILL CHANGE TO LOADING DIV </div> :
             <div className="brandGallery">
                 {
-                    this.props.brandImages && this.props.brandImages.map((data,key) => {
+                    this.props.companyInfo && this.props.companyInfo.map((company,key) => {
                         return (
                             <div className="brandGalleryRow" key={key}>
-                                <BrandDescriptionCard brandName={data.brandName} description={data.description}/>
-                                {
-                                    data.images.map((image, key) => {
-                                        return <GalleryCard imageInfo={image} key={key}/>
-                                    })
-                                }
+                                <BrandDescriptionCard company={company}/>
+                                <div className="brandGalleryRowImages">
+                                    {
+                                        company.products.map((product, key) => {
+                                            return <GalleryCard product={product} key={key}/>
+                                        })
+                                    }
+                                </div>
                             </div>
                         );
                     })
@@ -35,25 +41,27 @@ class BrandGallery extends Component{
     }
 }
 
-const BrandDescriptionCard = ({brandName, description}) => {
-    let link = `/shop/:${brandName}`
+const BrandDescriptionCard = ({company}) => {
+    let {name, about} = company;
+    let link = `/shop/${name}`;
     return(
         <div className="brandDescriptionCard">
-            <Link to={link}>
-                {brandName}
+            <Link className="brandCardLink" to={link}>
+                {formatText(name)}
             </Link>
-            <h3>{description}</h3>
+            <h3>{about}</h3>
         </div>
     );
 }
 
 const mapStateToProps = state => ({
-    brandImages: state.gallery.imagesInfo
+    companyInfo: state.brand.companyInfo,
+    gettingCompanyInfo: state.brand.gettingCompanyInfo
 });
 
 const mapDispatchToProps = dispatch => ({
-    getProductsForGallery: () => {
-        dispatch(getProductsForGallery());
+    getMostPopularBrandsAndImages: () => {
+        dispatch(getMostPopularBrandsAndImages());
     }
 })
 

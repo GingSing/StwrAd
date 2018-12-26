@@ -5,7 +5,7 @@ export function getProductsForGallery(){
     return dispatch => {
         dispatch(request());
         galleryService.getProductsForGallery()
-            .then(imagesInfo => {dispatch(success(imagesInfo))})
+            .then(imagesInfo => dispatch(success(imagesInfo)))
             .catch(err => dispatch(failure(err)));
     }
 

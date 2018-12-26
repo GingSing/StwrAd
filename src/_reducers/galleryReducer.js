@@ -15,7 +15,7 @@ export default function(state=initialState, action){
             return{
                 ...state,
                 gettingGalleryInfo: false,
-                images: action.imagesInfo
+                imagesInfo: action.imagesInfo
             };
         case GALLERY_INFO_FAILURE:
             return{

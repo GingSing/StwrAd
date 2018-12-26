@@ -1,4 +1,33 @@
 .brandGallery{
-    background-color: red;
-    height: 100px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brandGalleryRow{
+    display: flex;
+    margin-top: 2em; 
+    border-radius: 5px;
+}
+
+.brandGalleryRowImages{
+    width: 500px;
+    display: flex;
+}
+
+.brandDescriptionCard{
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #333;
+    margin-right: 20%;
+}
+
+.brandCardLink{
+    font-size: 3em;
 }

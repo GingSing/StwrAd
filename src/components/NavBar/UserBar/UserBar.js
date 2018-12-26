@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SearchBar from './SearchBar';
 import SignIn from './SignIn';
+import UserTools from './UserTools';
 
 import './UserBar.css';
 class UserBar extends Component{
@@ -11,7 +12,8 @@ class UserBar extends Component{
                 <SearchBar />
                 <div className="toolsWrapper">
                     {
-                        this.props.signedIn ? null:
+                        this.props.signedIn ? 
+                        <UserTools /> :
                         <SignIn />
                     }
                 </div>

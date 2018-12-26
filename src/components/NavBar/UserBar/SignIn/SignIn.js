@@ -94,7 +94,7 @@ const LabeledInput = ({ onChange, name }) => {
 
 const mapDispatchToProps = dispatch => ({
     signIn:(state) => {
-        const{ username, password } = state;
+        const { username, password } = state;
         dispatch(signIn(username, password));
     }
 });

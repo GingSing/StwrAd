@@ -1,0 +1,12 @@
+.userInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfo>label{
+    margin: 5px;
+}
+
+.profileCompany{
+    margin-top: 2vh;
+}

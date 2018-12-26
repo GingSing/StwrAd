@@ -1,8 +1,8 @@
 import { SIGNIN_REQUEST, SIGNIN_FAILURE, SIGNIN_SUCCESS, SIGNOUT } from '../_actions/types';
 
-let user = localStorage.getItem('username');
+let user = JSON.parse(localStorage.getItem('user'));
 let signedIn = user ? true : false;
-const initialState = {signingIn: false, signedIn: signedIn, user: user};
+const initialState = {signingIn: false, signedIn: signedIn, userInfo: user};
 
 export default function (state = initialState, action){
   switch(action.type){
@@ -16,7 +16,7 @@ export default function (state = initialState, action){
         ...state,
         signingIn: false,
         signedIn: true,
-        user: action.user
+        userInfo: action.user
       };
     case SIGNIN_FAILURE:
       return {};

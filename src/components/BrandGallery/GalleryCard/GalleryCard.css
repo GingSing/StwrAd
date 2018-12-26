@@ -1,0 +1,10 @@
+.galleryCard{
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.galleryCard:hover{
+    transform: translateY(-10px);
+    transition: all 0.3s ease-out;
+}

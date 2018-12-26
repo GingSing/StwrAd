@@ -10,17 +10,13 @@ function signIn(username, password){
     };
     return fetch('/users/login', requestOptions)
         .then(res => {
-            let { status } = res;
-            if(status){
+            if(res.ok){
                 return res.json();
             }
-            console.log(status);
-            throw Error(status);
+            throw Error(res);
         })
         .then(data => {
-            for(let info in data){
-                localStorage.setItem(info,data[info]);
-            }
+            localStorage.setItem('user', JSON.stringify(data));
             return data;
         })
 }
