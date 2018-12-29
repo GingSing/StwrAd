@@ -1,5 +1,6 @@
 export const authService = {
     signIn,
+    signOut
 }
 
 function signIn(username, password){
@@ -19,4 +20,8 @@ function signIn(username, password){
             localStorage.setItem('user', JSON.stringify(data));
             return data;
         })
+}
+
+function signOut(){
+    localStorage.removeItem('user');
 }

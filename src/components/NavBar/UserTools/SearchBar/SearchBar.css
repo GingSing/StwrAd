@@ -10,9 +10,3 @@
     padding: 2px;
     font-size: 1em;
 }
-
-@media only screen and (max-width: 875px){
-    .searchBar{
-        display:none;
-    }
-}

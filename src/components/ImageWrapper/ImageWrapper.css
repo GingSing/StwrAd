@@ -1,0 +1,22 @@
+.imageWrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.imageWrapper>img{
+    cursor: pointer;
+}
+
+.imageWrapper>img:hover{
+    transform: translateY(-10px);
+    transition: all 0.3s ease-out;
+}
+
+.imageDiv{
+    background-color: white;
+}
+
+.imageDiv>img{
+    display:block;
+}

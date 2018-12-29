@@ -1,7 +1,8 @@
-import { BRAND_INFO_REQUEST, BRAND_INFO_SUCCESS, BRAND_INFO_FAILURE } from '../_actions/types';
+import { BRAND_INFO_REQUEST, BRAND_INFO_SUCCESS, BRAND_INFO_FAILURE, BRAND_AND_IMAGES_FAILURE, BRAND_AND_IMAGES_REQUEST, BRAND_AND_IMAGES_SUCCESS } from '../_actions/types';
 
 let initialState = {
-    companyInfo: []
+    topBrandsInfo: [],
+    brandsInfo: {}
 }
 
 export default function(state=initialState, action){
@@ -9,18 +10,34 @@ export default function(state=initialState, action){
         case BRAND_INFO_REQUEST:
             return{
                 ...state,
-                gettingCompanyInfo: true
+                gettingTopBrandsInfo: true
             }
         case BRAND_INFO_SUCCESS:
             return{
                 ...state,
-                gettingCompanyInfo: false,
-                companyInfo: action.companyInfo
+                gettingTopBrandsInfo: false,
+                topBrandsInfo: action.topBrandsInfo
             }
         case BRAND_INFO_FAILURE:
             return{
                 ...state,
-                gettingCompanyInfo: false
+                gettingTopBrandsInfo: false
+            }
+        case BRAND_AND_IMAGES_REQUEST:
+            return{
+                ...state,
+                gettingBrandAndImages: true
+            }
+        case BRAND_AND_IMAGES_SUCCESS:
+            return{
+                ...state,
+                brandsInfo: action.brandsInfo,
+                gettingBrandAndImages: false
+            }
+        case BRAND_AND_IMAGES_FAILURE:
+            return{
+                ...state,
+                gettingBrandAndImages: false
             }
         default:
             return state;

@@ -1,4 +1,4 @@
-import { SIGNIN_REQUEST, SIGNIN_FAILURE, SIGNIN_SUCCESS } from './types';
+import { SIGNIN_REQUEST, SIGNIN_FAILURE, SIGNIN_SUCCESS, SIGNOUT } from './types';
 import { authService } from '../_services';
 
 export function signIn(username, password){
@@ -18,3 +18,10 @@ export function signIn(username, password){
     function success(user) { return { type: SIGNIN_SUCCESS, user }}
     function failure(error) { return { type: SIGNIN_FAILURE, error }}
   }
+
+export function signOut(){
+  return dispatch =>{
+    authService.signOut();
+    dispatch({type: SIGNOUT});
+  }
+}

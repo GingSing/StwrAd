@@ -4,7 +4,7 @@ import Browse from './Browse';
 import Post from './Post';
 import Register from './Register';
 import Profile from './Profile';
-import Company from './Company';
+import Brand from './Brand';
 
 export{
     Home,
@@ -13,5 +13,5 @@ export{
     Post,
     Register,
     Profile,
-    Company
+    Brand
 }

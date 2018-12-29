@@ -8,8 +8,8 @@ import './Profile.css';
 class Profile extends Component{
 
     render(){
-        console.log(this.props.userInfo);
-        return(
+        return (
+            this.props.userInfo ?
             <Page>
                 <div className="profile">
                     {this.props.userInfo ? 
@@ -17,8 +17,10 @@ class Profile extends Component{
                     null
                     }
                 </div>
-            </Page>
+            </Page>:
+            <div> Error 404: Page Not Found.</div>
         );
+
     }
 }
 

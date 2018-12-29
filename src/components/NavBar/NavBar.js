@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import UserBar from './UserBar';
+import UserTools from './UserTools';
 
 import './NavBar.css';
 
@@ -9,17 +9,17 @@ class NavBar extends Component{
         return(
             <div className="navBarWrapper">
                 <div className="navBar">
-                    <Brand name="StwrAd" />
-                    <UserBar />
+                    <BrandDiv name="StwrAd" />
+                    <UserTools />
                 </div>
             </div>
         );
     }
 }
 
-const Brand = ({name}) => {
+const BrandDiv = ({name}) => {
     return(
-        <div className="brand">
+        <div className="brandDiv">
             <Link to="/">
                 {name}
             </Link>

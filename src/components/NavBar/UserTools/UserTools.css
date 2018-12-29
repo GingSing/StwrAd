@@ -1,4 +1,4 @@
-.userBar{
+.userTools{
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -8,4 +8,11 @@
 .toolsWrapper{
     display: flex;
     margin-left: 30px;
+}
+
+
+@media only screen and (max-width: 1110px){
+    .searchBarWrapper{
+        display:none;
+    }
 }

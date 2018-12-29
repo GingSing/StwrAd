@@ -5,3 +5,10 @@ need to add more css to Profile, Post, Home(fix gallery brand)
 modularize the database and fix naming schemes for better readability
 
 also needs to add security to db access and for page access (protected routes)
+
+work on redux naming
+
+BRAND:
+
+Add imagewrapper to the images
+Add info to the icon, description etc...

@@ -21,7 +21,10 @@ export default function (state = initialState, action){
     case SIGNIN_FAILURE:
       return {};
     case SIGNOUT:
-      return {};
+      return {
+        initialState : {},
+        signedIn: false
+      };
     default:
       return state;
   }

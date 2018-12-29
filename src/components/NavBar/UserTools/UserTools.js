@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SearchBar from './SearchBar';
 import SignIn from './SignIn';
-import UserTools from './UserTools';
+import PrivateTools from './PrivateTools';
 
-import './UserBar.css';
-class UserBar extends Component{
+import './UserTools.css';
+class UserTools extends Component{
     render(){
         return(
-            <div className="userBar">
-                <SearchBar />
+            <div className="userTools">
+                <div className="searchBarWrapper">
+                    <SearchBar />
+                </div>
                 <div className="toolsWrapper">
                     {
                         this.props.signedIn ? 
-                        <UserTools /> :
+                        <PrivateTools /> :
                         <SignIn />
                     }
                 </div>
@@ -26,4 +28,4 @@ const mapStateToProps = state => ({
     signedIn: state.auth.signedIn
 });
 
-export default connect(mapStateToProps)(UserBar);
+export default connect(mapStateToProps)(UserTools);

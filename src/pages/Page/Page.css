@@ -7,5 +7,7 @@
 }
 .childrenWrapper{
     margin-top: 69px;
-    width: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { signIn } from '../../../../_actions/authActions';
 import Overlay from '../../../Overlay';
 
@@ -61,6 +62,9 @@ class SignIn extends Component{
         let { open, disabled } = this.state;
         return(
             <div className="signIn">
+                <button className="signInBtn" onClick={this.toggleOverlay}>
+                    <label> Sign In </label>
+                </button>
                 {
                     open ? 
                     <Overlay handleClick={this.toggleOverlay}>
@@ -71,11 +75,9 @@ class SignIn extends Component{
                             <button disabled={disabled} type="submit" value="submit" className="innerSignInBtn">
                                 Sign In
                             </button>
+                            <Link to='/register'>Register</Link>
                         </form>
-                    </Overlay>:
-                    <button className="signInBtn" onClick={this.toggleOverlay}>
-                        <label> Sign In </label>
-                    </button>
+                    </Overlay>: null
                 }
             </div>
         );
