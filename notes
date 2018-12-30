@@ -8,7 +8,32 @@ also needs to add security to db access and for page access (protected routes)
 
 work on redux naming
 
+NavBar:
+add a notification thingy
+add functionality to searchbar
+
 BRAND:
 
-Add imagewrapper to the images
-Add info to the icon, description etc...
+Add imagewrapper to the images                                              ... DONE!
+Add info to the icon, description etc... (configure db for it)
+Add more images and see what happens
+give function to the follow btn
+
+HOME:
+add more images
+add register company link
+eventually add save function
+
+POST:
+fix the look and make it work
+
+BROWSE:
+no functionality atm
+
+REGISTER USER/ COMPANY:
+needt o work on
+
+PROFILE:
+show more information
+
+PUT ON HEROKU along with database

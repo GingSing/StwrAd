@@ -4,11 +4,6 @@
     cursor: pointer;
 }
 
-.galleryCard>img{
-    height: inherit;
-    width: auto;
-}
-
 .galleryCard:hover{
     transform: translateY(-10px);
     transition: all 0.3s ease-out;

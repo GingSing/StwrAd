@@ -69,11 +69,11 @@ class SignIn extends Component{
                     open ? 
                     <Overlay handleClick={this.toggleOverlay}>
                         <form className="signInOverlay" onSubmit={this.handleSubmit} >
-                            <label>Sign In</label>
+                            <label className="signInOverlayLabel">Sign In</label>
                             <LabeledInput name="username" onChange={this.handleChange} />
                             <LabeledInput name="password" onChange={this.handleChange} />
                             <button disabled={disabled} type="submit" value="submit" className="innerSignInBtn">
-                                Sign In
+                                Submit
                             </button>
                             <Link to='/register'>Register</Link>
                         </form>
@@ -85,7 +85,7 @@ class SignIn extends Component{
 }
 
 const LabeledInput = ({ onChange, name }) => {
-    var fName = name.charAt(0).toUpperCase() + name.slice(1);
+    var fName = name.charAt(0).toUpperCase() + name.slice(1) + ": ";
     return(
         <div className="labeledInput">
             <label>{fName}</label>

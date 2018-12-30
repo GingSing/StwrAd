@@ -31,3 +31,21 @@
 .brandCardLink{
     font-size: 3em;
 }
+
+
+/** 
+    added border to fix height diff with active
+**/
+.brandDescriptionFollowBtn{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.brandDescriptionFollowBtn:active{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}

@@ -1,0 +1,15 @@
+.followBtn{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.followBtn:active{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}

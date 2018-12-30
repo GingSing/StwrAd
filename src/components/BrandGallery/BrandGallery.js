@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { formatText } from '../../utilities';
 
+import FollowBtn from '../Buttons/FollowBtn';
 import GalleryCard from './GalleryCard';
 
 import './BrandGallery.css';
@@ -42,6 +43,7 @@ const BrandDescriptionCard = ({brand}) => {
                 {formatText(name)}
             </Link>
             <h3>{about}</h3>
+            <FollowBtn />
         </div>
     );
 }

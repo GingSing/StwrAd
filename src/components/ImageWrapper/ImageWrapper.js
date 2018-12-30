@@ -21,11 +21,10 @@ class ImageWrapper extends Component{
     }
 
     render(){
-        let { srcProps, altProps, keyProps, widthProps, heightProps } = this.props;
+        let { srcProps, keyProps, widthProps, heightProps, comments } = this.props;
         let { open } = this.state;
         let props = {
             src: srcProps,
-            alt: altProps,
             height: heightProps,
             width: widthProps
         }
@@ -35,13 +34,15 @@ class ImageWrapper extends Component{
                 <Overlay handleClick={this.toggleOverlay}>
                     <div className="imageDivWrapper">
                         <div className="imageDiv">
-                            <img {...props} />
+                            <div className="whiteBackground">
+                                <img {...props} height="auto" width="400px" alt=""/>
+                            </div>
                         </div>
-                        <Comments />
+                        <Comments comments={comments} />
                     </div>
                 </Overlay> : null
                 }
-                <img {...props} onClick={this.toggleOverlay}/>
+                <img {...props} onClick={this.toggleOverlay} alt=""/>
             </div>
         );
     }

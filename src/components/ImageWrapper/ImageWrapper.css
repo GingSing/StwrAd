@@ -6,6 +6,7 @@
 
 .imageWrapper>img{
     cursor: pointer;
+    overflow-y: auto;
 }
 
 .imageWrapper>img:hover{
@@ -14,9 +15,26 @@
 }
 
 .imageDiv{
+    background-color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.imageDivWrapper{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.whiteBackground{
     background-color: white;
 }
 
-.imageDiv>img{
+/**
+    fixes line at the bottom
+**/
+.whiteBackground>img{
     display:block;
 }

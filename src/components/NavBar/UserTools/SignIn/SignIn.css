@@ -10,10 +10,11 @@
 
 .signInOverlay{
     background-color: white;
-    height: 150px;
-    width: 300px;
+    width: 250px;
     padding: 5% 8% 3% 8%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .innerSignInBtn{
@@ -29,4 +30,18 @@
 
 .signIn:hover .signInBtn label{
     cursor: pointer;
+}
+
+.labeledInput{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.signInOverlayLabel{
+    margin-bottom: 10px;
+}
+
+.signInRegisterLink{
+    color: blue;
 }

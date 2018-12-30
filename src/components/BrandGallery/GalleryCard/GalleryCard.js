@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ImageWrapper from '../../ImageWrapper';
 import './GalleryCard.css';
 
 class GalleryCard extends Component{
@@ -7,7 +7,7 @@ class GalleryCard extends Component{
         let { url, title, description, likes } = this.props.product.image[0];
         return(
             <div className="galleryCard">
-            <img src={url} alt=""/>
+            <ImageWrapper srcProps={url} heightProps="200px" widthProps="200px"/>
             {/*
             
             make white card to show description

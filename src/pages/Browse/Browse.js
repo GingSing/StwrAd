@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { FeedAndFilter } from '../../components';
+import Page from '../Page';
 
 import './Browse.css';
 
 class Browse extends Component{
+
     render(){
         return(
-            <div className="browse">
-                <FeedAndFilter />
-            </div>
+            <Page>
+                <div className="browse">
+                    <FeedAndFilter />
+                </div>
+            </Page>
         );
     }
 }
