@@ -37,3 +37,5 @@ PROFILE:
 show more information
 
 PUT ON HEROKU along with database
+
+add protected routes and protect nodejs routes

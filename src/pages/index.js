@@ -5,6 +5,7 @@ import Post from './Post';
 import Register from './Register';
 import Profile from './Profile';
 import Brand from './Brand';
+import RegisterCompany from './RegisterCompany';
 
 export{
     Home,
@@ -13,5 +14,6 @@ export{
     Post,
     Register,
     Profile,
-    Brand
+    Brand,
+    RegisterCompany
 }

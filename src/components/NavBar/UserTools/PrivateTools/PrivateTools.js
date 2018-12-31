@@ -40,7 +40,9 @@ class PrivateTools extends Component{
                 { open ?
                     <div className="privateToolsList">
                         <Link to="/browse">Browse</Link>
-                        <Link to="/post">Post</Link>
+                        {
+                            JSON.parse(localStorage.getItem('user')).user.company ? <Link to="/post">Post</Link> : null
+                        }
                         <Link to="/profile">Profile</Link>
                         <Link to="/">
                             <SignOutBtn signOut={this.props.signOut}/>

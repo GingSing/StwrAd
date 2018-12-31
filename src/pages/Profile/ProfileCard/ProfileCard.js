@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {formatText} from '../../../utilities';
 import './ProfileCard.css';
 
@@ -16,9 +17,13 @@ class ProfileCard extends Component{
                     <label>Date Joined: {dateJoined}</label>
                 </div>
                 <h2>Company</h2>
-                <div className="profileCompany">
-                    {formatText(company.name)}
-                </div>
+                {
+                    company ? 
+                    <div className="profileCompany">
+                        {formatText(company.name)}
+                    </div> :
+                    <Link to="/registerCompany" className="registerCompanyLink">Register for a Company</Link>
+                }
             </div>
         );
     }

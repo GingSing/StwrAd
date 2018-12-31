@@ -1,0 +1,39 @@
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-top: 4vh;
+    width: 100%;
+    align-items: center;
+}
+
+.registerForm>label{
+    width: 100%;
+}
+
+.registerForm>input{
+    margin-bottom: 10px;
+    border-radius: 2px;
+    height: 20px;
+    border: 2px solid #D3D3D3;
+    transition: all 0.2s ease;
+}
+
+.registerForm>button[type="submit"]{
+    width: 50%;
+    border: 1px solid black;
+    margin-top: 20px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+}
+
+.registerForm>button[type="submit"]:active{
+    background-color: white;
+    color: black;
+}
+
+.registerForm>input:focus{
+    border: 2px solid orange;
+    box-shadow: 5px 3px #888888;
+}

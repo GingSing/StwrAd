@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Home, About, Browse, Post, Register, Profile, Brand } from './pages'; 
+import { Home, About, Browse, Post, Register, Profile, Brand, RegisterCompany } from './pages'; 
 import './App.css';
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
           <Route path="/post" component={Post} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
+          <Route path="/registerCompany" component={RegisterCompany} />
         </Switch>
       </div>
     );
